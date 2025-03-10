@@ -31,6 +31,18 @@ export const TaskList = ({title, subtitle}) => {
                 <TaskItem key={task.id} task={task} handleDelete={handleDelete} />
             ))}
         </ul>
+        <div className="box success">
+            <p className="title">Success</p>
+            <p className="description">This is a success message</p>
+        </div>
+        <div className="box warning">
+            <p className="title">Warning</p>
+            <p className="description">This is a warning message</p>            
+        </div>
+        <div className="box alert">
+            <p className="title">Alert</p>
+            <p className="description">This is a alert message</p>               
+        </div>
     </>  
   )
 }
