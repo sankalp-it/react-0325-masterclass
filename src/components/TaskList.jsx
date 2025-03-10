@@ -12,7 +12,7 @@ import { TaskItem } from './TaskItem';
         Initial : export const TaskList = (props) => {
         Final : export const TaskList = ({title, subtitle}) => {
 */
-export const TaskList = (props) => {
+export const TaskList = ({title, subtitle}) => {
     const [tasks, setTasks] = useState([
         { id: 1, name: "Task 1", isComplete: true },
         { id: 2, name: "Task 2", isComplete: false },
@@ -25,7 +25,7 @@ export const TaskList = (props) => {
     }
    return (
     <> 
-        <h1>{props.title} - {props.subtitle}</h1>
+        <h1>{title} - {subtitle}</h1>
         <ul>
             {tasks.map((task) => (
                 <TaskItem task={task} handleDelete={handleDelete} />
