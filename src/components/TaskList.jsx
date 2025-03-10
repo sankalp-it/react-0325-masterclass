@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export const TaskList = () => {
+export const TaskList = (props) => {
     const [tasks, setTasks] = useState([
         { id: 1, name: "Task 1", isComplete: true },
         { id: 2, name: "Task 2", isComplete: false },
@@ -14,7 +14,7 @@ export const TaskList = () => {
     }
    return (
     <> 
-        <h1>Tasks List</h1>
+        <h1>{props.title}</h1>
         <ul>
             {tasks.map((task) => (
                 <li key={task.id} className={task.isComplete ? 'completed' : 'incomplete'}> 
