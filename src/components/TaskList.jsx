@@ -32,9 +32,19 @@ export const TaskList = ({title, subtitle}) => {
                 <TaskItem key={task.id} task={task} handleDelete={handleDelete} />
             ))}
         </ul>
-        <MessageBox type="box success" title="Success" description="This is a success message"/>
-        <MessageBox type="box warning" title="Warning" description="This is a warning message"/>
-        <MessageBox type="box alert" title="Alert" description="This is a alert message"/>
+        <MessageBox messageType="success">
+            <p className="title">Success</p>
+            <p className="description">This is a success message</p>
+        </MessageBox>
+        <MessageBox messageType="warning">
+            <p className="title">Warning</p>
+            <p className="description">This is a warning message</p>
+            <p className="description">Error while loading the page</p>
+        </MessageBox>
+        <MessageBox messageType="alert">
+            <p className="title">Alert</p>
+            <p className="description">This is a alert message</p>
+        </MessageBox>
     </>  
   )
 }

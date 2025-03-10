@@ -1,10 +1,13 @@
 import React from 'react'
 
-export const MessageBox = ({type,title,description}) => {
+/*
+ instead of passing different props I want to pass one pro and children
+ 
+*/
+export const MessageBox = ({messageType, children}) => {
   return (
-    <div className={type}>
-        <p className="title">{title}</p>
-        <p className="description">{description}</p>
+    <div className={`box ${messageType}`}>
+        {children}
     </div>
   )
 }
