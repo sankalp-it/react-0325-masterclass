@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  height: 100vh; /* Adjust as needed */
+  width: 100%;
+}
+.container {
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.left-section, .right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the start */
+}
+.left-section {
+  flex: 1; /* Equal width sections */
+  padding: 75px;
+  align-items: start;
+}
+.right-section {
+  flex: 2; /* Equal width sections */
+  padding: 100px;
+}
+
+.left-section {
+    background-color: #f0f0f0;
+}
+
+.right-section {
+  background-color: #e0e0e0;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Adjust as needed */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}

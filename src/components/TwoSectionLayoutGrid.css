@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal width columns */
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .left-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .right-section {
+    background-color: #e0e0e0;
+    padding: 20px;
+  }
