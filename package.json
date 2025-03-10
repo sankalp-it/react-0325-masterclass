@@ -1,11 +1,12 @@
 {
-  "name": "cgp-react-app",
+  "name": "react-0325-mc",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run commit-hash && vite build",
+    "commit-hash": "echo \"export const gitInfo = '$(git rev-parse HEAD)'\" > src/utils/git-info.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
