@@ -5,9 +5,14 @@ import React from 'react'
  
 */
 export const MessageBox = ({messageType, children}) => {
-  return (
-    <div className={`box ${messageType}`}>
-        {children}
+    const [show, setShow] = React.useState(true);
+return (
+    <div className={show ? '' : 'hidden'}>
+            <div className={`box ${messageType}`} style={{ position: 'relative' }}>
+                    <button onClick={() => setShow(!show)} className='trigger' style={{ position: 'absolute', right: '10px', top: '0px' }}>X</button>
+                    <br></br>
+                    {children}
+            </div>
     </div>
-  )
+)
 }
