@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { TaskItem } from './TaskItem';
+import { MessageBox } from './MessageBox';
 /*
   If we use general props at component level we need to refer all the correspinding values
   by refering to props. For example, if we have a prop called title, we need to refer it as
@@ -31,18 +32,9 @@ export const TaskList = ({title, subtitle}) => {
                 <TaskItem key={task.id} task={task} handleDelete={handleDelete} />
             ))}
         </ul>
-        <div className="box success">
-            <p className="title">Success</p>
-            <p className="description">This is a success message</p>
-        </div>
-        <div className="box warning">
-            <p className="title">Warning</p>
-            <p className="description">This is a warning message</p>            
-        </div>
-        <div className="box alert">
-            <p className="title">Alert</p>
-            <p className="description">This is a alert message</p>               
-        </div>
+        <MessageBox type="box success" title="Success" description="This is a success message"/>
+        <MessageBox type="box warning" title="Warning" description="This is a warning message"/>
+        <MessageBox type="box alert" title="Alert" description="This is a alert message"/>
     </>  
   )
 }
