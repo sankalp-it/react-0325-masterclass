@@ -1,12 +1,12 @@
 {
   "name": "react-0325-mc",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "npm run git-info && vite build",
-    "git-info": "echo \"export const gitInfo = '$(git rev-parse HEAD)'\" > src/utils/git-info.js",
+    "git-info": "echo \"export const gitInfo = '$(git ls-remote --get-url | xargs basename -s .git)'\" > src/utils/git-info.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
