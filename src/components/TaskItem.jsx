@@ -11,12 +11,12 @@ import React from 'react'
         Initial : export const TaskList = (props) => {
         Final : export const TaskList = ({title, subtitle}) => {
 */
-export const TaskItem = ({task, handleDelete}) => {
+export const TaskItem = ({project, task, handleDelete}) => {
   return (
     <div>
         <li className={task.isComplete ? 'completed' : 'incomplete'}> 
             <span>
-            {task.id}-{task.name}
+            For Project : {project} :: {task.id}-{task.name} 
             </span>
             <button className="delete" onClick={() => handleDelete(task.id)}>Delete</button>
         </li>

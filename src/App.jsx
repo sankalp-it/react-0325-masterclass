@@ -29,6 +29,8 @@ export default function App() {
     setNewCount(0);
   } 
 
+  const projectName = 'Starck AI'
+
   return (
     <>
       <Header />
@@ -36,7 +38,7 @@ export default function App() {
         <h1>This is main section</h1>
         <Counter count={newCount} handleOperation={handleOperation} handleReset={handleReset}/>
         <button className='trigger' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
-        {show && <TaskList title="My Task List" subtitle="Test"/>}
+        {show && <TaskList title="My Task List" subtitle="Test" project={projectName}/>}
       </div>
       <Footer />
       {/* <TwoSectionLayout

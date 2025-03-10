@@ -13,7 +13,7 @@ import { MessageBox } from './MessageBox';
         Initial : export const TaskList = (props) => {
         Final : export const TaskList = ({title, subtitle}) => {
 */
-export const TaskList = ({title, subtitle}) => {
+export const TaskList = ({project, title, subtitle}) => {
     const [tasks, setTasks] = useState([
         { id: 1, name: "Task 1", isComplete: true },
         { id: 2, name: "Task 2", isComplete: false },
@@ -26,10 +26,10 @@ export const TaskList = ({title, subtitle}) => {
     }
    return (
     <> 
-        <h1>{title} - {subtitle}</h1>
+        <h1>{project}: {title} - {subtitle}</h1>
         <ul>
             {tasks.map((task) => (
-                <TaskItem key={task.id} task={task} handleDelete={handleDelete} />
+                <TaskItem project={project} key={task.id} task={task} handleDelete={handleDelete} />
             ))}
         </ul>
         <MessageBox messageType="success">
