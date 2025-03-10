@@ -14,7 +14,7 @@ export const TaskList = (props) => {
     }
    return (
     <> 
-        <h1>{props.title}</h1>
+        <h1>{props.title} - {props.subtitle}</h1>
         <ul>
             {tasks.map((task) => (
                 <li key={task.id} className={task.isComplete ? 'completed' : 'incomplete'}> 
