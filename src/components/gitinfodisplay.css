@@ -1,5 +1,11 @@
-.gitinfo{
-    font-size: 40px;
+.gitinfo-header{
+    font-size: 15px;
     font-weight: bold;
     color: green;
-  }
+}
+.gitinfo-text{
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: darkorange;
+}

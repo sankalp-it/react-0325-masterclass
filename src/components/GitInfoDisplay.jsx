@@ -4,8 +4,8 @@ import './GitInfoDisplay.css'
 
 export const GitInfoDisplay = () => {
   return (
-    <div className="gitinfo">
-        <p>Git Info: {gitInfo}</p>
-    </div>
+    <>
+        <p><font className='gitinfo-header'>Built from Git Repo: </font><font className='gitinfo-text'>{gitInfo}</font></p>
+    </>
   )
 }
