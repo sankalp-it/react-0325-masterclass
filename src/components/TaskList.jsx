@@ -28,7 +28,7 @@ export const TaskList = ({title, subtitle}) => {
         <h1>{title} - {subtitle}</h1>
         <ul>
             {tasks.map((task) => (
-                <TaskItem task={task} handleDelete={handleDelete} />
+                <TaskItem key={task.id} task={task} handleDelete={handleDelete} />
             ))}
         </ul>
     </>  
