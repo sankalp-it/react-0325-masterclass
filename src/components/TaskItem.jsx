@@ -14,7 +14,7 @@ import React from 'react'
 export const TaskItem = ({project, task, handleDelete}) => {
   return (
     <div>
-        <li className={task.isComplete ? 'completed' : 'incomplete'}> 
+        <li className={`taskitem ${task.isComplete ? 'completed' : 'incomplete'}`}> 
             <span>
             For Project : {project} :: {task.id}-{task.name} 
             </span>

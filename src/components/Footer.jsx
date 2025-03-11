@@ -2,8 +2,8 @@
 import {GitInfoDisplay} from './GitInfoDisplay'
 export const Footer = () => {
   return (
-    <div>
+    <footer>
       <GitInfoDisplay />
-    </div>
+    </footer>
   )
 }

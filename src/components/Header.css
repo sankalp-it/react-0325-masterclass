@@ -4,5 +4,9 @@
   }
   .logo{
     height: 50px;
-    width: 250px;
   }
+
+  .logo img{
+    max-width: 250px;
+  }
+
