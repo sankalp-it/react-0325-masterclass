@@ -1,75 +1,31 @@
+import React from 'react'
 import { useState } from 'react'
-// import reactLogo from '../assets/react.svg'
-// import viteLogo from '../vite.svg'
-import MyNewButton from './MyNewButton'
-// import UserProfile from './UserProfile'
-// import Products from './Products'
-// import '../App.css'
+import { TaskList } from './TaskList';
+import Counter from './Counter';
 
-// const products = [
-//   { title: 'Cabbage', isFruit: false, id: 1 },
-//   { title: 'Garlic', isFruit: false, id: 2 },
-//   { title: 'Apple', isFruit: true, id: 3 },
-// ];
-
-// const user = {
-//   name: 'Hedy Lamarr',
-//   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-//   imageSize: 90,
-// };
-
-function MyButton() {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-
+export const MainContent = () => {
+    const [newCount, setNewCount] = useState(0);
+  
+    const [show,setShow] = useState(true);
+    function handleOperation(operator) {
+      if (operator == '+') {
+        setNewCount(newCount + 1);
+      } else {
+        setNewCount(newCount - 1);
+      }
+    }
+  
+    const handleReset = () => {
+      setNewCount(0);
+    } 
+  
+    const projectName = 'Starck AI'
   return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
-}
-
-function AboutPage() {
-  return (
-    <>
-      <h1>About</h1>
-      <p>Hello there.<br />How do you do?</p>
-    </>
-  );
-}
-
-
-
-function MainContent() {
-  const [count, setCount] = useState(0)
-  function handleButtonClick() {
-    setCount(count + 1);
-  }
-
-
-  return (
-    <>
-
-      <div>
-        <h1>Welcome to my app</h1>
-        <MyButton />
-      </div>
-
-      <div>
-        <h1>Counters that update separately</h1>
-        <MyButton />
-        <MyButton />
-      </div>
-      <div>
-        <h1>Counters that update together</h1>
-        <MyNewButton count={count} onClick={handleButtonClick}/>
-        <MyNewButton count={count} onClick={handleButtonClick}/>
-      </div>
-    </>
+    <div>
+        <h1>This is main section</h1>
+        <Counter count={newCount} handleOperation={handleOperation} handleReset={handleReset}/>
+        <button className='trigger' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
+        {show && <TaskList title="My Task List" subtitle="Test" project={projectName}/>}
+    </div>
   )
 }
-
-export default MainContent
