@@ -24,18 +24,6 @@ export default function App() {
         <MainContent />
         <Footer />
       </div>
-      
-      {/* <TwoSectionLayout
-        leftContent={
-          <div>
-            <h1>Navigation</h1>
-            <p>This is the content for the Navigation Bar.</p>
-          </div>
-        }
-        rightContent={
-          <MainContent />    
-        }
-      /> */}
     </>
   );
 }

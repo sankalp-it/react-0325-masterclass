@@ -73,3 +73,17 @@ function MainContent() {
 }
 
 export default MainContent
+
+// Two section layout commented from App.jsx
+      
+      {/* <TwoSectionLayout
+        leftContent={
+          <div>
+            <h1>Navigation</h1>
+            <p>This is the content for the Navigation Bar.</p>
+          </div>
+        }
+        rightContent={
+          <MainContent />    
+        }
+      /> */}
