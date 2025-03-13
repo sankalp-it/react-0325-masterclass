@@ -1,4 +1,5 @@
 import React from 'react'
+import './MessageBox.css'
 
 /*
  instead of passing different props I want to pass one pro and children

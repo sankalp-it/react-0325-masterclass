@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { TaskItem } from './TaskItem';
 import { MessageBox } from './MessageBox';
+import './TaskList.css';
 /*
   If we use general props at component level we need to refer all the correspinding values
   by refering to props. For example, if we have a prop called title, we need to refer it as
@@ -25,8 +26,8 @@ export const TaskList = ({project, title, subtitle}) => {
     
     }
    return (
-    <> 
-        <h1>{project}: {title} - {subtitle}</h1>
+    <section name="tasklist"> 
+        <h1 style={{color: "#be3434", border: "1 px solid #be3434"}}>{project}: {title} - {subtitle}</h1>
         <ul>
             {tasks.map((task) => (
                 <TaskItem project={project} key={task.id} task={task} handleDelete={handleDelete} />
@@ -45,6 +46,6 @@ export const TaskList = ({project, title, subtitle}) => {
             <p className="title">Alert</p>
             <p className="description">This is a alert message</p>
         </MessageBox>
-    </>  
+    </section>  
   )
 }

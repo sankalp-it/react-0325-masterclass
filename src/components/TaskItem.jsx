@@ -1,4 +1,5 @@
 import React from 'react'
+import "./TaskItem.css"
 
 /*
   If we use general props at component level we need to refer all the correspinding values
@@ -13,8 +14,8 @@ import React from 'react'
 */
 export const TaskItem = ({project, task, handleDelete}) => {
   return (
-    <div>
-        <li className={`taskitem ${task.isComplete ? 'completed' : 'incomplete'}`}> 
+    <div className='taskitem'>
+        <li className={task.isComplete ? 'completed' : 'incomplete'}> 
             <span>
             For Project : {project} :: {task.id}-{task.name} 
             </span>

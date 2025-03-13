@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { TaskList } from './TaskList';
 import Counter from './Counter';
+import './MainContent.css';
 
 export const MainContent = () => {
     const [newCount, setNewCount] = useState(0);

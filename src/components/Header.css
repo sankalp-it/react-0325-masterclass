@@ -1,12 +1,25 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  align-items: center;
+  max-width: 98%; /* 1000px  */
+  margin: auto;
+  border-bottom: 1px solid var(--theme-border);
+  font-size: 18px;
+  padding: 0px 10px;
+}
 .active {
     font-size: 50px;
   
-  }
-  .logo{
+}
+.logo{
     height: 50px;
-  }
+}
 
-  .logo img{
+.logo img{
     max-width: 250px;
-  }
+}
 
