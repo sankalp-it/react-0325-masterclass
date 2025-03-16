@@ -14,7 +14,7 @@ import './TaskList.css';
         Initial : export const TaskList = (props) => {
         Final : export const TaskList = ({title, subtitle}) => {
 */
-export const TaskList = ({project, title, subtitle}) => {
+export const TaskList = ({project, title, subtitle, show}) => {
     const [tasks, setTasks] = useState([
         { id: 1, name: "Task 1", isComplete: true },
         { id: 2, name: "Task 2", isComplete: false },
@@ -22,7 +22,8 @@ export const TaskList = ({project, title, subtitle}) => {
     ]);
     const styles = {
         color: "#be3434",
-        border: '1px solid #be3434',
+        border: '1px solid',
+        borderColor: show ? 'green':'#be3434',
         padding: '20px',
         borderRadius: '5px',
         margin: '10px 0',

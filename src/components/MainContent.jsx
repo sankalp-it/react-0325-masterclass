@@ -26,7 +26,7 @@ export const MainContent = () => {
         <h1>This is main section</h1>
         <Counter count={newCount} handleOperation={handleOperation} handleReset={handleReset}/>
         <button className='trigger' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
-        {show && <TaskList title="My Task List" subtitle="Test" project={projectName}/>}
+        {show && <TaskList title="My Task List" subtitle="Test" project={projectName} show={show}/>}
     </section>
   )
 }
