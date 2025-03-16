@@ -20,6 +20,14 @@ export const TaskList = ({project, title, subtitle}) => {
         { id: 2, name: "Task 2", isComplete: false },
         { id: 3, name: "Task 3", isComplete: false },
     ]);
+    const styles = {
+        color: "#be3434",
+        border: '1px solid #be3434',
+        padding: '20px',
+        borderRadius: '5px',
+        margin: '10px 0',
+        fontSize: '20px'
+      }
     function handleDelete(id) {
         console.log('Delete Task with id:', id);
         setTasks(tasks.filter((task) => task.id !== id));
@@ -27,7 +35,10 @@ export const TaskList = ({project, title, subtitle}) => {
     }
    return (
     <section name="tasklist"> 
-        <h1 style={{color: "#be3434", border: "1 px solid #be3434"}}>{project}: {title} - {subtitle}</h1>
+        {/* The following line is used to display the title and subtitle of the task list using inline styling */}
+        {/* <h1 style={{color: "#be3434", border: "1 px solid #be3434"}}>{project}: {title} - {subtitle}</h1> */}
+        {/* Now the same using constant at the top of the component */}
+        <h1 style={styles}>{project}: {title} - {subtitle}</h1>
         <ul>
             {tasks.map((task) => (
                 <TaskItem project={project} key={task.id} task={task} handleDelete={handleDelete} />
