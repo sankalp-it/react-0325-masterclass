@@ -1,6 +1,6 @@
 import React from 'react'
 import "./TaskItem.css"
-
+import styles from "./TaskItem.module.css"
 /*
   If we use general props at component level we need to refer all the correspinding values
   by refering to props. For example, if we have a prop called title, we need to refer it as
@@ -16,8 +16,8 @@ export const TaskItem = ({project, task, handleDelete}) => {
   return (
     <div className='taskitem'>
         <li className={task.isComplete ? 'completed' : 'incomplete'}> 
-            <span>
-            For Project : {project} :: {task.id}-{task.name} 
+            <span className={styles.title}>
+              For Project : {project} :: {task.id}-{task.name} 
             </span>
             <button className="delete" onClick={() => handleDelete(task.id)}>Delete</button>
         </li>
